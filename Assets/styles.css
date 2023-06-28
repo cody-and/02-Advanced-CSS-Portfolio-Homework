@@ -1,0 +1,33 @@
+nav {
+background-color: rgb(57, 119, 201);
+padding: 25px;
+border-bottom: black 5px;
+}
+
+nav h1 {
+font-size: 50px;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+text-shadow: -1px 1px 2px white;
+
+}
+
+nav ul {
+display: flex;
+justify-content: flex-end;
+
+}
+
+header {
+background-color: rgb(57, 119, 201);
+}
+
+header h2 {
+
+}
+aside {
+
+}
+
+main {
+
+}
