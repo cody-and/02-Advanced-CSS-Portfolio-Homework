@@ -1,28 +1,54 @@
-nav {
-background-color: rgb(57, 119, 201);
-padding: 25px;
-border-bottom: black 5px;
+:root{ 
+  --main-blue: rgb(57, 119, 201);
+  --secondary-grey: rgb(128, 128, 128);
 }
+
+/* background and formatting for the nav bar at the top of the screen */
+
+nav {
+background-color: var(--main-blue);
+padding: 25px;
+border-bottom: solid black 5px;
+}
+
+/* Cody Anderson in the top left */
 
 nav h1 {
-font-size: 50px;
-font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+font-size: 45px;
+font-family: Impact, 'Haettenschweiler' , 'Arial Narrow Bold', sans-serif;
 text-shadow: -1px 1px 2px white;
-
 }
+
+/* moves nav bar to the right side of the page */
 
 nav ul {
 display: flex;
 justify-content: flex-end;
-
+padding-right: 50px;
 }
+
+/* formatting for the links in the nav bar */
+
+nav li {
+  font-size: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+/* formatting for the header that goes below the nav bar on the page that displays which page you are on */
 
 header {
-background-color: rgb(57, 119, 201);
+background-color: var(--secondary-grey);
 }
 
-header h2 {
+/* formatting for the text in the header bar */
 
+header h2 {
+font-size: 60px;
+font-family: Impact, 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
+text-shadow: -1px 1px 2px white;
+display: flex;
+justify-content: flex-end;
+padding-right: 150px;
 }
 aside {
 
