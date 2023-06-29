@@ -6,25 +6,25 @@
 /* background and formatting for the nav bar at the top of the screen */
 
 nav {
-background-color: var(--main-blue);
-padding: 25px;
-border-bottom: solid black 5px;
+  background-color: var(--main-blue);
+  padding: 25px;
+  border-bottom: solid black 5px;
 }
 
 /* Cody Anderson in the top left */
 
 nav h1 {
-font-size: 45px;
-font-family: Impact, 'Haettenschweiler' , 'Arial Narrow Bold', sans-serif;
-text-shadow: -1px 1px 2px white;
+  font-size: 45px;
+  font-family: Impact, 'Haettenschweiler' , 'Arial Narrow Bold', sans-serif;
+  text-shadow: -1px 1px 2px white;
 }
 
 /* moves nav bar to the right side of the page */
 
 nav ul {
-display: flex;
-justify-content: flex-end;
-padding-right: 50px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50px;
 }
 
 /* formatting for the links in the nav bar */
@@ -37,23 +37,44 @@ nav li {
 /* formatting for the header that goes below the nav bar on the page that displays which page you are on */
 
 header {
-background-color: var(--secondary-grey);
+  background-color: var(--secondary-grey);
 }
 
 /* formatting for the text in the header bar */
 
 header h2 {
-font-size: 60px;
-font-family: Impact, 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
-text-shadow: -1px 1px 2px white;
+  font-size: 60px;
+  font-family: Impact, 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
+  text-shadow: -1px 1px 2px white;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 150px;
+}
+
+.container{
 display: flex;
-justify-content: flex-end;
-padding-right: 150px;
-}
-aside {
-
 }
 
-main {
+.sidebar {
+  flex: 1;
+  width: 25%;
+}
+.sidebar h3 {
+  font-size: 45px;
+  font-family: Impact, 'Haettenschweiler' , 'Arial Narrow Bold', sans-serif;
+  
+  max-width: 300px;
+  white-space: nowrap;
+}
 
+.about-me-sidebar{
+  padding: 50px 0 30px 10px;
+  border-right: 2px solid black;
+}
+
+.about-me-content p{
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 25px 30px 25px 30px;
+  flex: 2;
+  width: 75%;
 }
