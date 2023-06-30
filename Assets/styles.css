@@ -56,9 +56,24 @@ display: flex;
 }
 
 .sidebar {
-  flex: 1;
+  flex: 0 0 auto;
   width: 25%;
 }
+
+.content-section{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.about-me-content{
+  flex: 1;
+}
+
+.work-content{
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+ }
 .sidebar h3 {
   font-size: 45px;
   font-family: Impact, 'Haettenschweiler' , 'Arial Narrow Bold', sans-serif;
@@ -72,9 +87,35 @@ display: flex;
   border-right: 2px solid black;
 }
 
-.about-me-content p{
+.showcase-img-box {
+  flex-basis: 100%;
+  max-height: auto;
+  max-width: 100%;
+  margin: 45px 25px 45px 25px;
+}
+.showcase-img-box img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.img-pair{
+  flex-basis: 50%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.img-box {
+  flex-basis: 50%;
+  max-width: 40px;
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+.img-box img{
+  width: 100%;
+  height: auto;
+}
+ 
+.about-me-content p {
   font-family: Arial, Helvetica, sans-serif;
-  margin: 25px 30px 25px 30px;
-  flex: 2;
-  width: 75%;
+  padding: 15px;
 }
