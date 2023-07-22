@@ -34,6 +34,7 @@ nav li {
   margin-left: 10px;
   margin-right: 10px;
 }
+
 /* formatting for the header that goes below the nav bar on the page that displays which page you are on */
 
 header {
@@ -51,71 +52,86 @@ header h2 {
   padding-right: 150px;
 }
 
-.container{
-display: flex;
+.container {
+  display: grid;
+  grid-template-columns: 25% 75%;
 }
 
 .sidebar {
-  flex: 0 0 auto;
-  width: 25%;
-}
-
-.content-section{
-  flex: 1;
   display: flex;
   flex-direction: column;
 }
-.about-me-content{
-  flex: 1;
-}
 
-.work-content{
-  flex: 1;
-  display: flex;
-  flex-wrap: wrap;
- }
+/* Update the layout of the sidebar and content-section */
+
 .sidebar h3 {
   font-size: 45px;
-  font-family: Impact, 'Haettenschweiler' , 'Arial Narrow Bold', sans-serif;
-  
+  font-family: Impact, 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
   max-width: 300px;
   white-space: nowrap;
+  margin: 10px 0;
 }
 
-.about-me-sidebar{
+/* Update the styling of the h3 tags in the sidebar */
+
+.about-me-sidebar {
   padding: 50px 0 30px 10px;
   border-right: 2px solid black;
 }
 
-.showcase-img-box {
-  flex-basis: 100%;
-  max-height: auto;
-  max-width: 100%;
-  margin: 45px 25px 45px 25px;
-}
-.showcase-img-box img{
-  max-width: 100%;
-  max-height: 100%;
+.work-sidebar {
+  padding: 50px 0 30px 10px;
+  border-right: 2px solid black;
 }
 
-.img-pair{
-  flex-basis: 50%;
-  display: flex;
-  flex-wrap: wrap;
-}
-.img-box {
-  flex-basis: 50%;
-  max-width: 40px;
-  box-sizing: border-box;
-  padding: 5px;
+.contact-sidebar {
+  padding: 50px 0 30px 10px;
 }
 
-.img-box img{
-  width: 100%;
-  height: auto;
-}
- 
 .about-me-content p {
   font-family: Arial, Helvetica, sans-serif;
   padding: 15px;
+}
+
+.work-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.showcase-img-box {
+  margin: 45px 25px 45px 25px;
+  outline: solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 100%;
+}
+
+.showcase-img-box img {
+  padding: 100px;
+  max-width: 500px;
+  max-height: 400px;
+  outline: solid black;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-box {
+  flex-basis: 50%;
+  box-sizing: border-box;
+  padding: 15px 0 15px 0;
+  outline: solid orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-box img {
+  width: 300px;
+  height: 200px;
+  outline: solid green;
+}
+
+footer {
+  outline: solid green 1px;
 }
