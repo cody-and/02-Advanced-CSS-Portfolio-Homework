@@ -3,6 +3,12 @@
   --secondary-grey: rgb(128, 128, 128);
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
 /* background and formatting for the nav bar at the top of the screen */
 
 nav {
@@ -15,8 +21,9 @@ nav {
 
 nav h1 {
   font-size: 45px;
-  font-family: Impact, 'Haettenschweiler' , 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
   text-shadow: -1px 1px 2px white;
+  margin: 0;
 }
 
 /* moves nav bar to the right side of the page */
@@ -25,20 +32,26 @@ nav ul {
   display: flex;
   justify-content: flex-end;
   padding-right: 50px;
+  margin: 0;
 }
 
 /* formatting for the links in the nav bar */
 
 nav li {
   font-size: 25px;
+  font-weight: bold;
   margin-left: 10px;
   margin-right: 10px;
+  list-style: none;
 }
 
 /* formatting for the header that goes below the nav bar on the page that displays which page you are on */
 
 header {
   background-color: var(--secondary-grey);
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 /* formatting for the text in the header bar */
@@ -47,9 +60,7 @@ header h2 {
   font-size: 60px;
   font-family: Impact, 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
   text-shadow: -1px 1px 2px white;
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 150px;
+  margin: 0;
 }
 
 .container {
@@ -60,6 +71,9 @@ header h2 {
 .sidebar {
   display: flex;
   flex-direction: column;
+  background-color: var(--secondary-grey);
+  padding: 20px;
+  flex: 0 0 25%;
 }
 
 /* Update the layout of the sidebar and content-section */
@@ -75,17 +89,25 @@ header h2 {
 /* Update the styling of the h3 tags in the sidebar */
 
 .about-me-sidebar {
-  padding: 50px 0 30px 10px;
-  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  padding-bottom: 20px;
 }
 
 .work-sidebar {
-  padding: 50px 0 30px 10px;
-  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  padding-bottom: 20px;
 }
 
 .contact-sidebar {
-  padding: 50px 0 30px 10px;
+  padding-bottom: 20px;
+}
+
+.about-me-sidebar,
+.work-sidebar,
+.contact-sidebar {
+  border-bottom: 2px solid black;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .about-me-content p {
@@ -100,7 +122,6 @@ header h2 {
 
 .showcase-img-box {
   margin: 45px 25px 45px 25px;
-  outline: solid black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -111,16 +132,12 @@ header h2 {
   padding: 100px;
   max-width: 500px;
   max-height: 400px;
-  outline: solid black;
-  justify-content: center;
-  align-items: center;
 }
 
 .img-box {
   flex-basis: 50%;
   box-sizing: border-box;
   padding: 15px 0 15px 0;
-  outline: solid orange;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -129,9 +146,52 @@ header h2 {
 .img-box img {
   width: 300px;
   height: 200px;
-  outline: solid green;
 }
 
 footer {
-  outline: solid green 1px;
+  background-color: var(--secondary-grey);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%; 
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+footer li {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 20px;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--main-blue);
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    padding: 15px;
+  }
+
+  .showcase-img-box img,
+  .img-box img {
+    padding: 50px;
+    width: 100%;
+    height: auto;
+  }
 }
